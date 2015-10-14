@@ -15,6 +15,7 @@ class Gyro
 	public:
 	Gyro(int port) { m_port = port; m_val = 42.0f; };
 	float getValue(void) { return m_val; };
+	void setSensitivity(float x) {};
 };
 
 class Encoder
