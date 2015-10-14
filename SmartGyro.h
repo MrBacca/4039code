@@ -3,19 +3,26 @@
 
 #include <WPILib.h>
 
-class SmartGyro : Gyro
+class SmartGyro : private Gyro
 {
 	public:
-	SmartGyro(int gyroPort, Encoder *leftEncoder, Encoder *rightEncoder); 
-	float getAngle(void);
+		SmartGyro(int gyroPort, Encoder *leftEncoder, Encoder *rightEncoder); 
+		float getAngle(void);
+		void tick(void);
 	
 	private:
-	SmartGyro();
-
-	Gyro *m_gyro;
-	Encoder *m_leftE;
-	Encoder *m_rightE;
-	float m_angle;
+		//private functions
+		SmartGyro(){};
+		
+		//private variables
+		Encoder 	*m_leftEncoder;
+		Encoder 	*m_rightEncoder;
+		
+		float 		m_angle;
+		float 		m_calibrationFactor;
+		
+		int	 	m_lastLeftEnc;
+		int 		m_lastRightEnc;
 };
 
 #endif
