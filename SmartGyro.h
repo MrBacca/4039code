@@ -1,7 +1,7 @@
 #ifndef __SMARTGYRO__
 #define __SMARTGYRO__
 
-#include <WPILib.h>
+#include "WPIlib.h"
 
 class SmartGyro : private Gyro
 {
@@ -12,7 +12,7 @@ class SmartGyro : private Gyro
 	
 	private:
 		//private functions
-		SmartGyro(){};
+		SmartGyro() : Gyro() {};
 		
 		//private variables
 		Encoder 	*m_leftEncoder;
