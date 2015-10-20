@@ -18,12 +18,20 @@ class SmartGyro : private Gyro
 		//private variables
 		Encoder 	*m_leftEncoder;
 		Encoder 	*m_rightEncoder;
+
 		
 		float 		m_angle;
 		float 		m_calibrationFactor;
 		
-		int	 	m_lastLeftEnc;
+		int	 		m_lastLeftEnc;
 		int 		m_lastRightEnc;
+		
+		int 		lastEncoders[10];
+		
+		float		lastGyro[10];
+		
+		
+		
 };
 
 #endif
