@@ -9,7 +9,7 @@ class SmartGyro : private Gyro
 		SmartGyro(int gyroPort, Encoder *leftEncoder, Encoder *rightEncoder); 
 		float getAngle(void);
 		void tick(void);
-		void setSensitivity(float sen) { Gyro::setSensitivity(sen); };
+		void setSensitivity(float sensitivity);
 	
 	private:
 		//private functions

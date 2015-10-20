@@ -15,4 +15,7 @@ void SmartGyro::tick(void)
 {
 }
 
-
+void SmartGyro::setSensitivity(float sensitivity)
+{
+	Gyro::setSensitivity(sensitivity); 
+}
